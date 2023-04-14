@@ -30,7 +30,7 @@ sorted_index = dis.argsort(axis=1)[:,-10:]
 
 
 sources = []
-querys = []
+queries = []
 sift = cv2.SIFT_create()
 for idx,x in enumerate(glob.glob('.\query\*.jpg')):
 	print(idx)
@@ -60,7 +60,7 @@ for idx,x in enumerate(glob.glob('.\query\*.jpg')):
 
 res = pd.DataFrame({
 	"source":sources,
-	"query":querys
+	"query":queres
 })
 
 res.to_csv("submit_task2.csv", index=False)
