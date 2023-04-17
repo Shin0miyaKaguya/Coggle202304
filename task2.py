@@ -56,11 +56,11 @@ for idx,x in enumerate(glob.glob('.\query\*.jpg')):
 		all_mathces.append(len(good_matches))
 	best_match = np.array(all_mathces).argmax()
 	sources.append(can_pics[best_match].split('\\')[-1])
-	querys.append(query)
+	queries.append(query)
 
 res = pd.DataFrame({
 	"source":sources,
-	"query":queres
+	"query":queries
 })
 
 res.to_csv("submit_task2.csv", index=False)
